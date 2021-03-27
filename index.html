@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>presentation Website</title>
+            <link rel="stylesheet" href="style.css">
+            
+      </head>
+      <body>
+           <!--page 01--> 
+           <section id="page-01" class="page">
+                 <h1>Welcome to my presentation</h1>
+                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum excepturi consectetur, illum laborum maxime in fugiat assumenda sed error architecto distinctio repudiandae, facere deleniti? Laborum sit eius sapiente error laudantium ea modi, quisquam, perspiciatis quas, id eum vitae cumque magnam.</p>
+                 <div>
+                       <a href="#page-02" class="btn">Next Page</a>
+
+                 </div>
+           </section>
+           <!--page 02--> 
+           <section id="page-02" class="page">
+            <h1>page 2</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum excepturi consectetur, illum laborum maxime in fugiat assumenda sed error architecto distinctio repudiandae, facere deleniti? Laborum sit eius sapiente error laudantium ea modi, quisquam, perspiciatis quas, id eum vitae cumque magnam.</p>
+            <div>
+                  <a href="#page-01" class="btn btn-dark">previous Page</a>
+                  <a href="#page-03" class="btn">Next Page</a>
+
+            </div>
+      </section>
+      <section id="page-03" class="page">
+            <h1>page 3</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum excepturi consectetur, illum laborum maxime in fugiat assumenda sed error architecto distinctio repudiandae, facere deleniti? Laborum sit eius sapiente error laudantium ea modi, quisquam, perspiciatis quas, id eum vitae cumque magnam.</p>
+            <div>
+                  <a href="#page-02" class="btn btn-dark">previous Page</a>
+                  <a href="#page-04" class="btn">Next Page</a>
+
+            </div>
+      </section>
+      <section id="page-04" class="page">
+            <h1>page 4</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum excepturi consectetur, illum laborum maxime in fugiat assumenda sed error architecto distinctio repudiandae, facere deleniti? Laborum sit eius sapiente error laudantium ea modi, quisquam, perspiciatis quas, id eum vitae cumque magnam.</p>
+            <div>
+                  <a href="#page-03" class="btn">previous Page</a>
+                 
+
+            </div>
+      </section>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script>
+      //smooth scrolling
+      $('.btn').on('click',function(event){
+            if (this.hash !== ''){
+                  event.preventDefault();
+                  const hash = this.hash;
+                  $('html,body').animate({
+                        scrollTop: $(hash).offset().top
+                  },800
+                  
+                 );
+            }
+      });
+      
+      </script>
+      </body>
+</html>
